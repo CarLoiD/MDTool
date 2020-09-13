@@ -203,8 +203,8 @@ inline void ReadVertexUVBuffer(FILE* stream, VertexUV* vertexUVBuffer, const uin
     {
         uint16_t tmpU, tmpV;
 
-		fread(&tmpU, sizeof(uint16_t), 1, stream);
-		fread(&tmpV, sizeof(uint16_t), 1, stream);
+        fread(&tmpU, sizeof(uint16_t), 1, stream);
+        fread(&tmpV, sizeof(uint16_t), 1, stream);
 
         vertexUVBuffer[index].u = ((float)tmpU / 32767.0f) * 8.0f;
         vertexUVBuffer[index].v = 1.0f - ((float)tmpV / 32767.0f) * 8.0f;
